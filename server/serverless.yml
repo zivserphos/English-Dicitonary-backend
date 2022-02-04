@@ -25,5 +25,4 @@ functions:
     memorySize: 128 # mb
     timeout: 15 # seconds
     events:
-      - http: GET /
-      - http: GET {proxy+}
+      - http: "*"
