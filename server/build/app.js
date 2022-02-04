@@ -17,7 +17,7 @@ const app = (0, express_1.default)();
 app.use(express_1.default.json());
 app.use((0, cors_1.default)());
 app.use(body_parser_1.default.text());
-app.use(express_1.default.static(path_1.default.resolve("./client")));
+app.use(express_1.default.static(path_1.default.resolve("../client/build")));
 app.use(morgan_2.default, (0, morgan_1.default)(":method :url :status :res[content-length] - :response-time ms :body"));
 app.use("/api", dictionaryRouter_1.default);
 app.get("/", render_1.default);

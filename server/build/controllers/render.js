@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const path_1 = __importDefault(require("path"));
 const render = (_req, res, next) => {
     try {
-        res.sendFile(path_1.default.resolve("./client/index.html"));
+        res.sendFile(path_1.default.resolve("../client/build/index.html"));
     }
     catch (err) {
         next(err);

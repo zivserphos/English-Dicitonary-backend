@@ -11,7 +11,6 @@ const awsConfig = {
     accessKeyId: index_1.default.AWS_accessKeyId,
     secretAccessKey: index_1.default.Aws_secretAccessKey,
 };
-console.log(awsConfig);
 aws_sdk_1.default.config.update(awsConfig);
 const docClient = new aws_sdk_1.default.DynamoDB.DocumentClient();
 console.log("Connected to DynamoDb");

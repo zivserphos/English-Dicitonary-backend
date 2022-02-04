@@ -12,12 +12,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.isPartOfSpeech = exports.genRandomWord = exports.genParams = exports.genHeaders = void 0;
+exports.isPartOfSpeech = exports.genRandomWord = exports.genParams = void 0;
 const axios_1 = __importDefault(require("axios"));
 const TABLE_NAME = "dictionary";
 const validSpeech = ["adv.", "n.", "v.", "prep.", "conj.", "interj.", "pron."];
-const genHeaders = (res) => res.writeHead(200, { "Access-Control-Allow-Origin": "*" });
-exports.genHeaders = genHeaders;
 const genParams = (keyCon, expressionAttr, partOfSpeech) => {
     const ExpressionAttributeValues = partOfSpeech
         ? { ":w": expressionAttr, ":p": partOfSpeech }

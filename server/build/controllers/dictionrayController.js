@@ -16,10 +16,8 @@ exports.randomWordBySpeech = exports.getWordAndPartOfSpeech = exports.getWord = 
 const dictionary_1 = __importDefault(require("../services/dictionary"));
 const getWord = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        res.setHeader("Access-Control-Allow-Origin", "*");
         const word = req.params.word.toUpperCase();
         const wordDefinision = yield dictionary_1.default.getWord(word);
-        console.log(res);
         return res.send(wordDefinision);
     }
     catch (err) {
@@ -29,8 +27,6 @@ const getWord = (req, res, next) => __awaiter(void 0, void 0, void 0, function* 
 exports.getWord = getWord;
 const getWordAndPartOfSpeech = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        console.log("hereee");
-        res.setHeader("Access-Control-Allow-Origin", "*");
         const word = req.params.word.toUpperCase();
         const { partofspeech } = req.params;
         const wordDefinision = yield dictionary_1.default.getWordAndPartOfSpeech(word, partofspeech);
@@ -43,7 +39,6 @@ const getWordAndPartOfSpeech = (req, res, next) => __awaiter(void 0, void 0, voi
 exports.getWordAndPartOfSpeech = getWordAndPartOfSpeech;
 const randomWordBySpeech = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        res.setHeader("Access-Control-Allow-Origin", "*");
         const { part } = req.params;
         const wordDefinision = yield dictionary_1.default.randomWordBySpeech(part);
         console.log(wordDefinision);
