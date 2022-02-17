@@ -16,6 +16,7 @@ exports.randomWordBySpeech = exports.getWordAndPartOfSpeech = exports.getWord = 
 const dictionary_1 = __importDefault(require("../services/dictionary"));
 const getWord = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     try {
+        console.log("here at get word controller");
         const word = req.params.word.toUpperCase();
         const wordDefinision = yield dictionary_1.default.getWord(word);
         return res.send(wordDefinision);

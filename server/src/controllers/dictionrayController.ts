@@ -3,6 +3,7 @@ import dictionaryService from "../services/dictionary";
 
 export const getWord: Handler = async (req, res, next) => {
   try {
+    console.log("here at get word controller");
     const word = req.params.word.toUpperCase();
     const wordDefinision = await dictionaryService.getWord(word);
     return res.send(wordDefinision);

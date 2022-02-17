@@ -7,7 +7,7 @@ const getWord = async (word: string) => {
   const params = genParams(`word = :w`, word);
   // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
   const response = await docClient.query(params).promise();
-  console.log(response);
+  console.log(response, "response");
   return {
     data: response.Items,
   };

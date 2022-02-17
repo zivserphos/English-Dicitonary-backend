@@ -7,7 +7,6 @@ import morganHandler from "./middlewares/morgan";
 import errorHandler from "./middlewares/errorHandlers";
 import DictionaryRouter from "./routes/dictionaryRouter";
 import unknownEndPoint from "./controllers/unknownEndpoint";
-import render from "./controllers/render";
 
 const app = express();
 
@@ -21,11 +20,6 @@ app.use(
 );
 
 app.use("/api", DictionaryRouter);
-app.get("/", render);
-app.get("/words/:word", render);
-app.get("/words/:word/:pos", render);
-app.get("/part-of-speech/:pos", render);
-app.get("/part-of-speech/:pos/:letter", render);
 
 app.use(errorHandler);
 app.use(unknownEndPoint);

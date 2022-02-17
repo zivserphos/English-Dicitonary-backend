@@ -19,7 +19,7 @@ const getWord = (word) => __awaiter(void 0, void 0, void 0, function* () {
     const params = (0, helpers_1.genParams)(`word = :w`, word);
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     const response = yield aws_config_1.default.query(params).promise();
-    console.log(response);
+    console.log(response, "response");
     return {
         data: response.Items,
     };

@@ -1,0 +1,1 @@
+GET https://9oebulyr27.execute-api.eu-west-1.amazonaws.com/api/zone HTTP/1.1
